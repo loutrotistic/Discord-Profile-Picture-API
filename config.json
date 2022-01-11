@@ -1,4 +1,4 @@
 {
     "PORT": 4000,
-    "TOKEN": "TOKEN"
+    "TOKEN": "TOKEN" // discord bot token
 }
