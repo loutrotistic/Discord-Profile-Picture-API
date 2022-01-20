@@ -25,13 +25,20 @@ const client = new Client({
 });
 
 
-app.get(`/avatar/:userID/:size`, function(req, res) {
-    var userID = req.params.userID;
+app.get(`/avatar/:userID/:size/:format`, function(req, res) {
     let size = req.params.size;
+    let format = req.params.format;
+
+    if (!size) {
+        size = 1024
+    };
+    if (!format) {
+        format = webp
+    };
 
     client.users.fetch(req.params.userID).then((user) => {
     
-    res.redirect(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=${size}`)
+    res.redirect(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${format}?size=${size}`)
     console.log(user)
 })
 })
