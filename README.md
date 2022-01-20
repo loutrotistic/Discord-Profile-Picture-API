@@ -1,5 +1,17 @@
 STEP 1 :
 Complete config.json
 
+
 STEP 2 :
-Go to your localhost:PORT/userID/pictureSize
+Use the API : 
+
+- localhost:PORT/avatar/userID/size/format
+
+- localhost:PORT/banner/userID/size/format
+
+- localhost:PORT/username/userID
+
+- localhost:PORT/discriminator/userID
+
+- localhost:PORT/tag/userID
+
