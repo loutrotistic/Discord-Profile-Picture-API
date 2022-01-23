@@ -57,25 +57,6 @@ app.get('/banner/:userID/:size?/:format?', (req, res) => {
     })
 })
 
-app.get('/username/:userID/', (req, res) => {
-    client.users.fetch(req.params.userID).then((user) => {
-        res.send(user.username)
-        console.log(user)
-    })
-});
-
-
-app.get('/discriminator/:userID/', (req, res) => {
-    client.users.fetch(req.params.userID).then((user) => {
-        res.send(user.discriminator)
-    })
-})
-
-app.get('/tag/:userID/', (req, res) => {
-    client.users.fetch(req.params.userID).then((user) => {
-        res.send(`${user.username}#${user.discriminator}`)
-    })
-})
 
 app.listen(config.PORT, () => {
     console.log('Server Started')
