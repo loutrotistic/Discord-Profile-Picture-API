@@ -62,5 +62,5 @@ app.listen(config.PORT, () => {
     console.log('Server Started')
 });
 
-client.login(config.TOKEN)
+client.login(process.env.TOKEN)
 console.log('Bot Started')
